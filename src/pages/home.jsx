@@ -12,10 +12,14 @@ const Home = () => {
         <>
             <HeroSection />
             <main>
-                <StudentSection />
-                <TestimonialsSection />
-                <TutorailSection />
-                <ProductSection />
+                <section id='students-section'>
+                    <StudentSection />
+                    <TestimonialsSection />
+                </section>
+                <section id='product-section'>
+                    <TutorailSection />
+                    <ProductSection />
+                </section>
                 <TutorsSection />
                 <PricingSection />
                 <FaqSection />

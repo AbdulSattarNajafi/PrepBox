@@ -1,17 +1,15 @@
 import ReactPlayer from 'react-player';
-import VideoThumbnail from './../../assets/images/video-thumbnail.png';
 import classes from './product-section.module.css';
 
 const ProductSection = () => {
     return (
-        <section className={classes.section} id='product-section'>
+        <div className={classes.section}>
             <div className={classes.container}>
                 <h2>Our product in action</h2>
 
                 <div className={classes.content}>
                     <ReactPlayer
-                        light={<img src={VideoThumbnail} alt='Thumbnail' />}
-                        url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
+                        url='https://www.youtube.com/embed/eIxCSFL9Am4'
                         width='100%'
                         height='100%'
                         config={{
@@ -22,7 +20,7 @@ const ProductSection = () => {
                     />
                 </div>
             </div>
-        </section>
+        </div>
     );
 };
 

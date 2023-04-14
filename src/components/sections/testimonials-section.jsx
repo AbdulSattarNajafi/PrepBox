@@ -5,7 +5,7 @@ import classes from './testimonials-section.module.css';
 
 const TestimonialsSection = () => {
     return (
-        <article className={classes.section}>
+        <div className={classes.section}>
             <div className={classes.container}>
                 <div className={classes.header}>
                     <h2>Testimonials</h2>
@@ -45,7 +45,7 @@ const TestimonialsSection = () => {
             <div className={classes.learn}>
                 <Learn />
             </div>
-        </article>
+        </div>
     );
 };
 

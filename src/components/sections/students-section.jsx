@@ -23,7 +23,7 @@ import classes from './students-section.module.css';
 
 const StudentSection = () => {
     return (
-        <section className={classes.section} id='students-section'>
+        <div className={classes.section}>
             <div className={classes['section-container']}>
                 <div className={classes['section__header']}>
                     <h2 className={classes['section__header-title']}>Our Student Outcomes</h2>
@@ -117,7 +117,7 @@ const StudentSection = () => {
                     />
                 </div>
             </div>
-        </section>
+        </div>
     );
 };
 

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link as RouteLink } from 'react-router-dom';
 import { Link } from 'react-scroll';
 
 import { ReactComponent as Logo } from './../assets/images/logo.svg';
@@ -30,17 +31,9 @@ const Header = () => {
                 id='header'
             >
                 <nav className={classes.nav}>
-                    <Link
-                        className={classes['nav-logo']}
-                        to='hero'
-                        activeClass={classes.active}
-                        spy={true}
-                        smooth={true}
-                        offset={-80}
-                        duration={500}
-                    >
+                    <RouteLink to='/' className={classes['nav-logo']}>
                         <Logo />
-                    </Link>
+                    </RouteLink>
 
                     <div
                         className={`${classes.menu} ${showMenu ? `${classes['show-menu']}` : ''}`}

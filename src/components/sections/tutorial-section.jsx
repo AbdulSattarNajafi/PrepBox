@@ -1,7 +1,12 @@
 import { useState } from 'react';
 
-import Tutorial from './../../assets/images/tutorial.png';
 import { ReactComponent as Arrow } from './../../assets/icons/accordion-arrow.svg';
+import BookAssessment from './../../assets/gifs/booking.gif';
+import Login from './../../assets/gifs/login.gif';
+import Lecture from './../../assets/gifs/lectures.gif';
+import Solving from './../../assets/gifs/solving.gif';
+import Submitting from './../../assets/gifs/submitting.gif';
+
 import classes from './tutorial-section.module.css';
 
 const guidance = [
@@ -9,41 +14,46 @@ const guidance = [
         id: '01',
         title: 'Book Free Assessment',
         description: [
-            'Take an assessment with our exprienced tutor to understand where you are for your grade and identify weaknesses',
-            '"I really felt like the tutor understood exactly what I needed to do to improve my grades after the assessment"',
+            'Our dashboard gives you an overview of your progress towards conquering your math curriculum',
+            `"It's very encouraging to log in and see how far you've come since starting the program. It gets me excited each session."`,
         ],
+        image: BookAssessment,
     },
     {
         id: '02',
         title: 'Login to your account',
         description: [
             'Take an assessment with our exprienced tutor to understand where you are for your grade and identify weaknesses',
-            '"I really felt like the tutor understood exactly what I needed to do to improve my grades after the assessment"',
+            `"I really felt like the tutor understood exactly what I needed to do to improve my grades after the assessment"`,
         ],
+        image: Login,
     },
     {
         id: '03',
         title: 'Watch mini-lectures',
         description: [
-            'Take an assessment with our exprienced tutor to understand where you are for your grade and identify weaknesses',
-            '"I really felt like the tutor understood exactly what I needed to do to improve my grades after the assessment"',
+            'This is our "learning" part: our lectures are designed to deliver exactly the lectures you need to understand before each problem set',
+            `"I love how short and sweet the lectures are. I don't get bored and can dive into questions to apply the concepts right away."`,
         ],
+        image: Lecture,
     },
     {
         id: '04',
         title: 'Begin solving questionst',
         description: [
-            'Take an assessment with our exprienced tutor to understand where you are for your grade and identify weaknesses',
-            '"I really felt like the tutor understood exactly what I needed to do to improve my grades after the assessment"',
+            'This is our "doing" part: students begin applying concepts immediately after our lecture videos.',
+            `"It's not like other programs where I have to submit before seeking help. Hint videos and similar questions give me the tools I need to solve the questions!"`,
         ],
+        image: Solving,
     },
     {
         id: '05',
         title: 'Submit and get marked real-time',
         description: [
-            'Take an assessment with our exprienced tutor to understand where you are for your grade and identify weaknesses',
-            '"I really felt like the tutor understood exactly what I needed to do to improve my grades after the assessment"',
+            'Our tutors and A.I. mark the the submissions within minutes of submission. Solutions without proper work are marked wrong to encourage good habits.',
+            `"I love that I don't have to wait overnight to get marked. Solution videos are a plus that helps me learn faster!"`,
         ],
+        image: Submitting,
     },
 ];
 
@@ -51,10 +61,6 @@ const TutorailSection = () => {
     const [accordion, setAccordion] = useState(0);
 
     const accordionHandler = (index) => {
-        if (index === accordion) {
-            return setAccordion(-1);
-        }
-
         setAccordion(index);
     };
 
@@ -115,7 +121,17 @@ const TutorailSection = () => {
                     </ul>
                 </div>
                 <div className={classes['content__wrapper-image']}>
-                    <img src={Tutorial} alt='Image' />
+                    {guidance.map((guide) => {
+                        return (
+                            <div
+                                key={guide.id}
+                                className={classes['content__gify']}
+                                style={{ transform: `translateY(-${accordion}00%)` }}
+                            >
+                                <img src={guide.image} alt={guide.title} />
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
         </section>

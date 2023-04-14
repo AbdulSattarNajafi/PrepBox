@@ -1,3 +1,4 @@
+import { Link as RouteLink } from 'react-router-dom';
 import { Link } from 'react-scroll';
 
 import PrepLogo from './../assets/icons/prep-logo.svg';
@@ -36,7 +37,9 @@ const Footer = () => {
 
                 <div className={classes.content}>
                     <div className={classes['content__texts']}>
-                        <img src={FooterLogo} alt='Logo' />
+                        <RouteLink to='/'>
+                            <img src={FooterLogo} alt='Logo' />
+                        </RouteLink>
                         <h6>Learn by Doing</h6>
                         <p>
                             We have taught over 2,000 students, and over 500 of our students have
