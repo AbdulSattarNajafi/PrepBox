@@ -6,6 +6,7 @@ import Login from './../../assets/gifs/login.gif';
 import Lecture from './../../assets/gifs/lectures.gif';
 import Solving from './../../assets/gifs/solving.gif';
 import Submitting from './../../assets/gifs/submitting.gif';
+import AskingForTutor from './../../assets/gifs/askingfortutor.gif';
 
 import classes from './tutorial-section.module.css';
 
@@ -54,6 +55,15 @@ const guidance = [
             `"I love that I don't have to wait overnight to get marked. Solution videos are a plus that helps me learn faster!"`,
         ],
         image: Submitting,
+    },
+    {
+        id: '06',
+        title: 'If stuck, ask our tutors!',
+        description: [
+            'Our experienced tutors respond right away to make sure you learn the materials with proper depth.',
+            `"On difficult questions, experienced tutors always help me with clever ways to understand the problems. Thank you!"`,
+        ],
+        image: AskingForTutor,
     },
 ];
 
